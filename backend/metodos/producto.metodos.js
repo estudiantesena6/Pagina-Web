@@ -14,7 +14,7 @@ productoCtrl.getProducto = async (req, res) => {
 };// esta base de codigo consulta un producto por su id
 
 //crear un empleado
-productosCtrl.createProducto = async (req, res) => {
+productoCtrl.createProducto = async (req, res) => {
     const productos = new Productos(req.body); // crea un nuevo producto con los datos enviados en el cuerpo de la solicitud
     await productos.save(); // guarda el producto en la base de datos
     res.json({
