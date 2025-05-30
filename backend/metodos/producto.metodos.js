@@ -1,4 +1,4 @@
-const Productos = require('../modelos/producto.models.js'); // seconecta al modelo de productos y lo trae
+const Productos = require('../models/productos.models'); // seconecta al modelo de productos y lo trae
 const productoCtrl = {}; // objeto que contiene los métodos para manejar los productos. {} donde va la informacion ingresada
 
 //Define los metodos del controlador de productos
