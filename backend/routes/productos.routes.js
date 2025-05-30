@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const productoCtrl = require('../metodos/producto.metodos.js'); // Importa el controlador de productos
+const productoCtrl = require('../metodos/producto.metodos'); // Importa el controlador de productos
 // Define las rutas para los productos
 router.get('/', productoCtrl.getProductos); // Ruta para obtener todos los productos
 router.get('/:id', productoCtrl.getProducto); // Ruta para obtener un producto por ID
