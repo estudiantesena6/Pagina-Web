@@ -9,3 +9,13 @@
 <app-ejercicio7></app-ejercicio7>
 }
 <app-ejercicio8></app-ejercicio8>
+
+<app-ejercicio9 [msg]="text"></app-ejercicio9>
+
+<app-ejercicio10 [msg]="text"></app-ejercicio10>
+
+<app-ejercicio11 (login)="setName($event)"></app-ejercicio11>
+<p class="mx-3">{{name}}, Este esta en el padre y lo recibimos del hijo </p>
+
+<app-ejercicio12 (login)="setName($event)"></app-ejercicio12>
+<p class="mx-3">{{name}}, Este esta en el padre y lo recibimos del hijo </p>

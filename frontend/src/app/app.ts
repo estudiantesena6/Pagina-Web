@@ -9,13 +9,23 @@ import { Ejercicio5 } from './pages/ejercicio5/ejercicio5';
 import { Ejercicio6 } from './pages/ejercicio6/ejercicio6';
 import { Ejercicio7 } from './pages/ejercicio7/ejercicio7'; 
 import { Ejercicio8 } from './pages/ejercicio8/ejercicio8';
+import { Ejercicio9 } from './pages/ejercicio9/ejercicio9';
+import { Ejercicio10 } from './pages/ejercicio10/ejercicio10';
+import { Ejercicio11 } from './pages/ejercicio11/ejercicio11';
+import { Ejercicio12 } from './pages/ejercicio12/ejercicio12';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Header,Ejercicio2,Ejercicio3,Ejercicio4,Ejercicio5,Ejercicio6,Ejercicio7, Ejercicio8], // llamar al componente
+  imports: [RouterOutlet,Header,Ejercicio2,Ejercicio3,Ejercicio4,Ejercicio5,Ejercicio6,Ejercicio7, Ejercicio8,Ejercicio9,Ejercicio10,Ejercicio11,Ejercicio12], // llamar al componente
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected title = 'frontend';
+  text: string = 'Hola, Angular';
+  name: string = '';
+
+  setName(e: any) {  
+    this.name = e; 
+}
 }

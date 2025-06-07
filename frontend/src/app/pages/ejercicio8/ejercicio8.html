@@ -1,14 +1,25 @@
-<h1>Ejercicio 8</h1>
-<ul>
-  @for ( producto of productos; track producto.id) {
-    <li class="list-group-item my-3">
-      <div class="card" style="width: 18rem;">
-        <img [src]="producto.img" class="card-img-top" [alt]="producto.nombre">
+<!-- decorador @for objeto -->
+
+<h1>Ejercicio 8</h1> <!-- titulo de la pagina -->
+<h2>Lista de productos</h2> <!-- subtitulo de la pagina -->
+<ul> <!-- lista de productos -->
+  <div class="row"> <!-- row significa filas --> 
+  @for (producto of productos; track producto.id) { <!--track, estás indicando que cada elemento del bucle debe ser identificado por una propiedad única,-->
+     <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-3"> <!-- columnas que se adaptan a diferentes tamaños de pantalla -->
+    <li class="list-group-item my-3"> <!-- item de la lista -->
+      <div class="card" style="width: 18rem;"> <!-- tarjeta que contiene la imagen y el texto del producto -->
+        <img [src]="producto.img" class="card-img-top" alt="industrial" width="400">
         <div class="card-body">
-          <h5 class="card-title">{{ producto.nombre }}</h5>
-          <p class="card-text">${{ producto.precio }}</p>
-        </div>
-      </div>
-    </li>
+          <p >{{ producto.nombre }}</p> <!--espara hacerlo dinamico y traiga productos y precio-->
+          <p >{{ producto.precio }}</p>
+        </div> <!-- fin del cuerpo de la tarjeta -->
+      </div>  <!-- fin de la tarjeta -->
+     </li>  <!-- fin del item de la lista -->
+    </div>  <!-- fin de la columna -->
   }
-</ul>
+</div>
+</ul>  <!-- fin de la lista de productos -->
+       
+         
+
+        
