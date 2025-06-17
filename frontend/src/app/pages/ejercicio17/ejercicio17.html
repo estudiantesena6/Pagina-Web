@@ -1,0 +1,32 @@
+<h1>ejercicio17 works!</h1>
+
+<form [formGroup]="movieForm" (Submit)="handleSubmit()">
+    <div class="mb-3">
+        <label for="movi-name" class="form-label">nombre de pelicula</label>
+        <input type="text" class="form-control" id="movi-name" formControlName="nombre">
+        @if(nombre.invalid && nombre.touched){
+            <div class="alert alert-danger">
+                El nombre de la pelicula es requerido
+            </div>
+        }
+    </div>
+    <div class="mb-3">
+        <label for="movi-duracion" class="form-label">Duración</label>
+        <input type="text" class="form-control" id="movi-duracion" formControlName="duracion">
+        @if(duracion.invalid && duracion.touched){
+            <div class="alert alert-danger">
+                La duración de la pelicula es requerida y debe ser menor a 300 minutos
+            </div>
+        }
+    </div>
+    <div class="mb-3">
+        <label for="movi-director" class="form-label">Director</label>
+        <input type="text" class="form-control" id="movi-director" formControlName="director">
+        @if(director.invalid && director.touched){
+            <div class="alert alert-danger">
+                El director de la pelicula es requerido
+            </div>
+        }
+        
+    </div>
+<button [disabled]="movieForm.invalid" type="submit" class="btn btn-primary">enviar pelicula</button>
